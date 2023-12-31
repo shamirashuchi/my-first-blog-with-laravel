@@ -1,0 +1,196 @@
+/*.test*/
+/*{*/
+/*    background-color:green;*/
+/*    color: white;*/
+/*}*/
+/*.menu*/
+/*{*/
+/*    list-style-type: none;*/
+/*}*/
+/*.menu li{*/
+/*    float:left;*/
+/*    width: 120px;*/
+/*    border:1px solid gray;*/
+/*}*/
+/*.menu li a{*/
+/*    display:block;*/
+/*    text-decoration : none;*/
+/*    text-align: center;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*    padding: 10px;*/
+/*    font-family:Arial;*/
+/*    font-weight:bolder;*/
+/*    text-transform:capitalize;*/
+/*    transition: 0.5s;*/
+/*}*/
+/*.menu li a:hover{*/
+/*    background-color: lightgrey;*/
+/*    color:black;*/
+/*}*/
+/*.div-one{*/
+/*    width:20%;*/
+/*    height:200px;*/
+/*    background-color: red;*/
+/*    float:left;*/
+/*    color:white;*/
+/*    box-sizing:border-box;*/
+/*    padding-top:80px;*/
+/*    padding-left:80px;*/
+/*    !*margin: 10px 20px 30px 40px;*!*/
+/*    !*margin-left:20px;*!*/
+/*}*/
+/*.div-two{*/
+/*    width:80%;*/
+/*    height:200px;*/
+/*    background-color: green;*/
+/*    float:left;*/
+/*}*/
+/*.div-three{*/
+/*    width:100%;*/
+/*    height:50px;*/
+/*    background-color: gray;*/
+/*    float:left;*/
+/*}*/
+/*.div-four{*/
+/*    width:15%;*/
+/*    height:600px;*/
+/*    background-color: darkolivegreen;*/
+/*    float:left;*/
+/*}*/
+/*.div-five{*/
+/*    width:85%;*/
+/*    height:600px;*/
+/*    background-color: darkgreen;*/
+/*    float:left;*/
+/*}*/
+/*.div-six{*/
+/*    width:100%;*/
+/*    height:40px;*/
+/*    background-color: gray;*/
+/*    float:left;*/
+/*}*/
+*
+{
+    box-sizing:border-box;
+    margin: 0;
+    padding:0;
+}
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*='col-']
+{
+    float:left;
+    border:1px solid grey;
+}
+.h-40{height:40px;}
+.h-50{height:50px;}
+.h-200{height:200px;}
+.h-250{height:250px;}
+.h-300{height:300px}
+.h-600{height:600px;}
+
+/*[class^='col-']*/
+/*{*/
+/*    float:left;*/
+/*}*/
+/*pseudo class puro element change kore*/
+/*pseudo element specific part change kore*/
+/*:after is a pseudo element*/
+/*content means new element will start, clear mane 2 ta div sore jabe, display block hoye jabe*/
+.row:after{
+    content:" ";
+    clear: both;
+    display: block;
+}
+.container
+{
+    width:90%;
+    height: auto;
+    margin: 0 auto;
+}
+.box-one{
+    height:300px;
+    width:300px;
+    /*background-color: red;*/
+    /*background: linear-gradient(to top,red,green,blue,yellow);*/
+    background: radial-gradient(red,green,blue,yellow);
+    float:left;
+    margin:20px;
+    /*transform:rotateY(0deg);*/
+    /*transform:scale(1);*/
+    /*transform:skewY(30deg);*/
+    /*transform:skewY(-30deg);*/
+    /*transition: 1.5s;*/
+    /*border-radius: 20px 40px 60px;*/
+    border-radius: 150px;
+}
+
+.box-one:hover
+{
+    /*transform:rotateY(360deg);*/
+    /*transform:scale(1.5);*/
+    /*transform:scale(.5);*/
+    /*transform:skew(45deg);*/
+}
+.logo{
+    animation-name: bitm;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+@Keyframes bitm{
+    /*from{background-color: red;}*/
+    /*to{background-color: green;}*/
+     0%{background-color: red;}
+    50%{background-color: green;}
+    75%{background-color: blue;}
+    100%{background-color: orange;}
+}
+
+.banner{
+    animation: slider 3s infinite;
+    /*animation-name: slider;*/
+    /*animation-duration: 3s;*/
+    /*animation-iteration-count: infinite;*/
+}
+@Keyframes  slider{
+    /*from{background-color: red;}*/
+    /*to{background-color: green;}*/
+    0%{
+        background-image: url("../img/2.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    50%{
+        background-image: url("../img/3.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    100%{
+        background-image: url("../img/4.jpeg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+}
+/*media query---> css syntax by browser resulation give condition . And that condition will work only when condition is true*/
+@media screen and (max-width: 550px)
+{
+    [class*='col-']
+    {
+       width:100%;
+    }
+}
