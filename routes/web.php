@@ -22,3 +22,5 @@ Route::get('/blog-detail/{id}',[homeController::class, 'detail'])->name('detail'
 Route::post('/make-full-name',[homeController::class, 'makeFullName'])->name('make-full-name');
 Route::post('/make-series',[homeController::class, 'makefullseries'])->name('make-series');
 Route::get('/add-blog',[BlogController::class, 'index'])->name('blog.add');
+Route::post('/new-blog',[BlogController::class, 'saveBlog'])->name('blog.new');
+Route::get('/manage-blog',[BlogController::class, 'manageBlog'])->name('blog.manage');

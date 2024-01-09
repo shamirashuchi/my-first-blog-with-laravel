@@ -13,7 +13,8 @@
                     <div class="card">
                         <div class="card-header">Add Blog Page</div>
                         <div class="card-body"></div>
-                        <form action=" " method = "POST">
+                        <form action="{{ route('blog.new') }}" method = "POST">
+                            @csrf
                             <div class="row mb-3">
                                 <label class = "col-lg-3">Blog Title</label>
                                 <div class = "col-md-9">
@@ -30,7 +31,7 @@
                             <div class="row mb-3">
                                 <label class = "col-lg-3">Blog Image</label>
                                 <div class = "col-md-9">
-                                    <input type="text" class="form-control" name="image"/>
+                                    <input type="file" class="form-control" name="image"/>
                                 </div>
                             </div>
                             <div class="row mb-3">
