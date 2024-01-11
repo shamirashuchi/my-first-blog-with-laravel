@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('bitm')
-    Add blog
+    Edit Blog Page
 @endsection
 
 
@@ -13,31 +13,33 @@
                     <div class="card">
                         <div class="card-header">Add Blog Page</div>
                         <div class="card-body"></div>
-                        <form action="{{ route('blog.new') }}" method = "POST" enctype="multipart/form-data">
+                        <form action="{{ route('blog.update') }}" method = "POST">
                             @csrf
+                            <input type="hidden" value="{{$blog->id}}" name="id">
                             <div class="row mb-3">
                                 <label class = "col-lg-3">Blog Title</label>
                                 <div class = "col-md-9">
-                                    <input type="text" class="form-control"  name="title"/>
+                                    <input type="text" class="form-control" value="{{$blog->title}}" name="title"/>
                                 </div>
                             </div>
 
                             <div class="row mb-3">
                                 <label class = "col-lg-3">Blog Description</label>
                                 <div class = "col-md-9">
-                                    <input type="text" class="form-control" name="description"/>
+                                    <textarea  class="form-control" name="description">{{$blog->description}}</textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class = "col-lg-3">Blog Image</label>
                                 <div class = "col-md-9">
                                     <input type="file" class="form-control" name="image"/>
+                                    <img src="{{asset($blog->image)}}" alt="{{$blog->image}}">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class = "col-lg-3"></label>
                                 <div class = "col-md-9">
-                                    <input type="submit" class="btn btn-success" value="create New Blog"/>
+                                    <input type="submit" class="btn btn-success" value="Update"/>
                                 </div>
                             </div>
                         </form>
